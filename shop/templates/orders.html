@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %} 
+    <h1>Orders</h1>
+    <ul>
+        {% for order in order_list %}
+            <li>{{order}}</li>
+            <ul>
+                <li>{{order.size}}</li>
+                <li>{{order.temp}}</li>
+                <li>{{order.flavor}}</li>
+                <li>{{order.dairy}}</li>
+                <li>{{order.sweetener}}</li>
+            </ul>
+        {% endfor %}
+    </ul>
+{% endblock %} 

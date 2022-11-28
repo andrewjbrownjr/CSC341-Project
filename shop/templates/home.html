@@ -1,0 +1,13 @@
+{% extends "base.html" %} 
+
+{% block content %} 
+    {% if submitted %}
+        Your order was submitted successfully!
+    {% else %}
+        <form action="" method=POST>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    {% endif %}
+{% endblock %} 
